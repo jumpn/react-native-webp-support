@@ -93,7 +93,9 @@ RCT_EXPORT_MODULE()
         animation.values = images;
         animation.duration = timestamp / 1000.0;
         animation.removedOnCompletion = NO;
-        image.reactKeyframeAnimation = animation;
+
+        // Chris@20191004: image.reactKeyframeAnimation does not exist anymore, commenting as we dont need anim support
+        // image.reactKeyframeAnimation = animation;
     } else {
         int width = 0, height = 0;
         uint8_t *data = WebPDecodeRGBA([imageData bytes], [imageData length], &width, &height);
